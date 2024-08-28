@@ -6,34 +6,35 @@ The aim of this experiment is to create a Markov Decision Process (MDP) represen
 ## PROBLEM STATEMENT:
 
 ### Problem Description
-The problem involves managing the treatment of patients who can be in one of four states: Sitting,Stand, Walk,Crashed and Run. The objective is to determine whether to check patient is able to Run.
+The problem involves managing the treatment of patients who can be in one of four states: Sleeping,Wakeup,Reading, Playing and Cooking. The objective is to determine whether to check patient is able to Cook.
 
 ### State Space
-State 0: Sitting State 1: Stand State 2: Walk State 3: Crashed State 4: Run
+State 0: Sleeping State 1: Wakeup State 2: Reading State 3: Playing State 4: Cooking
 
-{Sitting,Stand, Walk,Crashed ,Run} -> {0, 1, 2,3,4}
+{Sleeping,Wakeup,Reading,Playing,Cooking} -> {0, 1, 2,3,4}
 
 ### Sample State
-State: Sitting Sitting -> 0 (The patient is Sitting, represented numerically as 0.)
+State: Sleeping -> 0 (The patient is Sleeping, represented numerically as 0.)
 
 ### Action Space
-Action 0: Sitting Action 1: Standing etc....
+Action 0: Sleeping Action 1: Wakeup etc....
 
 {Treat, Not Treat} -> {0, 1}
 
 ### Sample Action
 
-Action: Stand Treat -> 1 (The action taken is to Stand patient, represented numerically as 1.)
+Action: Wakeup Treat -> 1 (The action taken is to Waking up the patient, represented numerically as 1.)
 
 
 
 ### Reward Function
-R = { +1 , if the patient state is changed to Run state or not, otherwise -1}
+R = { +1 , if the patient state is changed to Cook state or not, otherwise -1}
 
-Transition to Run state: +1 Staying sick : -1 Terminal states: No reward
+Transition to Cook state: +1 Staying sick : -1 Terminal states: No reward
 
 ### Graphical Representation
 
+![image](https://github.com/user-attachments/assets/8133e1e2-ce72-4d89-a5ae-1f089d8bee90)
 
 ## PYTHON REPRESENTATION:
 ```
@@ -68,7 +69,8 @@ print(p)
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/f48bfa0d-d3cd-4671-b607-559ca36e40e1)
+
+![image](https://github.com/user-attachments/assets/5e21f233-6447-42d1-96dd-a7aa8398716d)
 
 
 ## RESULT:
